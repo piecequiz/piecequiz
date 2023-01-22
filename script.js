@@ -1,6 +1,6 @@
 const form = document.querySelector("form");
+const correct = document.querySelector("#correct");
 const result = document.querySelector("#result");
-
 const correctAnswers = ["1", "1", "3", "4"]
 
 form.addEventListener(
@@ -16,8 +16,9 @@ form.addEventListener(
         }
     })
 
-    result.innerText = `Du svarade rätt på ${numberOfCorrectAnswers} av 4 frågor!`;
+    correct.innerText = `Du svarade rätt på ${numberOfCorrectAnswers} av 4 frågor!`;
     form.hidden = true
+    result.hidden = false
     event.preventDefault();
   },
   false
